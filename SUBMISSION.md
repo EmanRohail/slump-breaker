@@ -2,6 +2,10 @@
 
 **Slump Breaker wins back lapsed readers with a comeback book chosen by Qloo's taste graph, not by guesswork.**
 
+- **Live demo:** https://slump-breaker-xgmsapphsectx3mcq2nkr8z.streamlit.app/
+- **Code:** https://github.com/EmanRohail/slump-breaker (MIT)
+- **Try it:** Continue as guest → Reader view → type `enemies to lovers` (type: Trope), or upload `tools/test_readers.csv` in the Business view.
+
 Book businesses (reading apps, book boxes, publishers, libraries) lose readers to reading slumps. A generic "here are this month's bestsellers" email rarely brings them back. Slump Breaker takes what a business already knows about a lapsed reader (a name, a few things they love, and optionally why they stopped) and, for each reader, finds a book that connects to their actual taste, then writes a personal win-back message for email, push or SMS.
 
 ## What it does
