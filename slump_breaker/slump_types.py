@@ -50,6 +50,29 @@ SLUMP_TYPES: dict[str, SlumpType] = {
 REASON_OPTIONS: list[tuple[str, str]] = [(t.key, t.label) for t in SLUMP_TYPES.values()]
 
 
+def parse_reason(text: str) -> tuple[str, bool]:
+    """Turn free text from a CSV into a slump key. Returns (key, was_guessed).
+
+    A blank or unrecognized reason falls back to 'lost_habit' and is flagged as a
+    guess, so the UI can say so instead of presenting it as fact.
+    """
+    cleaned = (text or "").strip().lower().replace("-", " ").replace("_", " ")
+    if cleaned:
+        for key, slump in SLUMP_TYPES.items():
+            if cleaned in (key.replace("_", " "), slump.label.lower()):
+                return key, False
+        aliases = {
+            "taste": "taste_mismatch", "mismatch": "taste_mismatch", "not my taste": "taste_mismatch",
+            "tired": "burnout", "burned out": "burnout", "burnt out": "burnout",
+            "long": "too_long", "dense": "too_long", "too long or dense": "too_long",
+            "habit": "lost_habit", "busy": "lost_habit",
+            "nothing new": "nothing_new", "bored": "nothing_new", "stale": "nothing_new",
+        }
+        if cleaned in aliases:
+            return aliases[cleaned], False
+    return "lost_habit", True
+
+
 def get_slump(key: str) -> SlumpType:
     if key not in SLUMP_TYPES:
         raise ValueError(f"Unknown slump type: {key!r}")

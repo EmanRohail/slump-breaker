@@ -7,7 +7,7 @@ from __future__ import annotations
 import os
 
 DEFAULT_QLOO_BASE_URL = "https://hackathon.api.qloo.com"
-DEFAULT_GEMINI_MODEL = "gemini-2.0-flash"
+DEFAULT_GEMINI_MODEL = "gemini-flash-lite-latest"
 
 
 def _from_streamlit_secrets(name: str) -> str:
@@ -38,3 +38,19 @@ def gemini_api_key() -> str:
 
 def gemini_model() -> str:
     return get_setting("GEMINI_MODEL", DEFAULT_GEMINI_MODEL)
+
+
+def supabase_url() -> str:
+    return get_setting("SUPABASE_URL")
+
+
+def supabase_anon_key() -> str:
+    return get_setting("SUPABASE_ANON_KEY")
+
+
+def max_readers() -> int:
+    """Readers per batch. The real ceilings are Qloo's request quota and run time, not file size."""
+    try:
+        return max(1, min(int(get_setting("MAX_READERS", "200")), 1000))
+    except ValueError:
+        return 200

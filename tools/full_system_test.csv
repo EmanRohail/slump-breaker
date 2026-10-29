@@ -1,0 +1,114 @@
+name,favorites,reason,notes
+
+T01 Twisted Love,Twisted Love,taste mismatch,"TITLE: Ana Huang's book (Twisted, #1), not the 2026 film or the 2016 book; picks: her other books"
+T02 Twisted Love book,Twisted Love (book),burnout,TITLE+HINT: Ana Huang's book
+T03 Twisted series,Twisted Games; Twisted Hate,nothing new,"SERIES TAGS: both match Ana Huang (Twisted, #2 / #3)"
+T04 Twisted Lies,Twisted Lies,busy,KNOWN GAP: Qloo lacks Huang's Twisted Lies; matches Angela Marsons' book; CHECK THESE MATCHES warning expected
+T05 Circe,Circe,too long,"POPULARITY: Madeline Miller's novel, not the little-known artist"
+T06 Dune,Dune,long,"POPULARITY: the 2021 film, not the 2000 TV show"
+T07 Dune book,Dune (book),dense,HINT: Frank Herbert's novel
+T08 Hades,Hades,bored,"NEAR TIE: the video game (type order), not the artist"
+T09 Fourth Wing,Fourth Wing,taste,"SERIES TAG: Fourth Wing (The Empyrean, #1)"
+T10 two books,The Song of Achilles; It Ends With Us,not my taste,two popular books
+T11 hinted books,Harry Potter (book); Pride and Prejudice (book),,books with hints; blank reason shown as a guess
+G01 dark romance,dark romance,taste mismatch,"GENRE (slang map): Qloo tag Dark romance; Credence, Twisted Games, Kate Stewart"
+G02 dark romance hinted,dark romance (genre),burnout,GENRE via the dropdown word
+G03 romcom,romcom,nothing new,"GENRE (slang): Contemporary romance + Comedy; Sophie Kinsella, Bridget Jones"
+G04 rom com,rom com (genre),busy,spelling variant of romcom
+G05 romantic comedy,romantic comedy,long,spelling variant of romcom
+G06 romantasy,romantasy,taste,"GENRE: Qloo tag Romantasy; Sarah J. Maas, Rebecca Yarros"
+G07 cozy mystery,cozy mystery,burned out,"GENRE (Qloo tag search): Thursday Murder Club, Vera Wong"
+G08 psych thriller,psychological thriller,bored,GENRE (tag search)
+G09 dark fantasy,Dark fantasy,dense,"GENRE (tag search), capitalised"
+G10 spicy,spicy; smut,,GENRE slang: both mean Erotic romance
+G11 ya and sci fi,ya; sci fi; self help,habit,"GENRE slang: Young adult, Science fiction, Self help"
+G12 plain genres,romance; fantasy; horror; thriller; mystery,tired,"five bare genre words: Qloo genre tags live, stand-in titles offline"
+G13 loose genre hint,viking romance (genre),stale,"GENRE chosen, no exact tag: closest (Romance) used and flagged as uncertain"
+G14 genre lookalike,The Last Romance,taste,"TITLE ending in a genre word: searched as a title, not turned into Romance"
+G15 two genres,romcom; horror,nothing new,TWO GENRES: each gives its own picks; combined step says they cannot be combined
+P01 enemies to lovers,enemies to lovers,taste mismatch,"TROPE (Qloo tag): A Court of Silver Flames, Book Lovers, Red White & Royal Blue"
+P02 e2l spellings,Enemies-to-lovers; rivals to lovers; hate to love,burnout,ALIASES: all the same trope
+P03 friends to lovers,friends to lovers (trope),nothing new,"TROPE tag: Happy Place, Better Than the Movies"
+P04 second chance,second chance romance,busy,ALIAS -> second chance tag
+P05 fake dating,fake dating; fake relationship,long,TROPE tag (keyword) + alias
+P06 love triangle,love triangle (trope),taste,"TROPE tag: The Selection, The Host, Jenny Han"
+P07 arranged marriage,marriage of convenience,burned out,ALIAS -> arranged marriage tag
+P08 billionaire,billionaire romance,bored,"TROPE tag: Lauren Asher, T.L. Swan"
+P09 small town,small town (trope),dense,"TROPE tag: Abby Jimenez, Tessa Bailey"
+P10 mafia,mafia romance,tired,"TROPE tag: Rina Kent, Cora Reilly"
+P11 sports,sports romance; hockey romance,,TROPE tag + alias (same trope)
+P12 workplace,office romance; boss romance,habit,ALIASES -> workplace romance tag
+P13 reverse harem,reverse harem; why choose,stale,TROPE tag + alias
+P14 grumpy sunshine,grumpy sunshine (trope),taste mismatch,EXAMPLE BOOKS: Book Lovers + Icebreaker; picks by OTHER authors
+P15 grumpy spelling,grumpy x sunshine,burnout,alias of grumpy sunshine
+P16 slow burn,slow burn; slowburn,nothing new,EXAMPLE BOOKS; alias collapses
+P17 found family,found family (trope),busy,EXAMPLE BOOKS: Six of Crows + The Long Way...; no Leigh Bardugo sequels
+P18 morally grey,morally gray,long,"EXAMPLE BOOKS via US spelling: The Atlas Six, Time War"
+P19 forced proximity,forced proximity; only one bed,taste,EXAMPLE BOOKS; alias
+P20 forbidden love,forbidden romance (trope),burned out,EXAMPLE BOOKS via alias
+P21 chosen one,the chosen one,bored,EXAMPLE BOOKS: Harry Potter + Percy Jackson
+P22 brothers best friend,brother's best friend (trope),dense,EXAMPLE BOOKS: Twisted Love + The Deal (apostrophe handled)
+P23 secret relationship,secret relationship,tired,EXAMPLE BOOKS
+P24 fated mates,fated mates; mates,,EXAMPLE BOOKS; alias
+P25 revenge,revenge (trope),habit,EXAMPLE BOOKS: Monte Cristo + Vicious
+P26 unknown trope,third act breakup (trope),stale,"UNKNOWN TROPE: listed under Couldn't match, never searched as a title"
+P27 unknown + known,age gap (trope); enemies to lovers,taste,one unknown trope + one known: the known one still gives picks
+M01 title + genre,Fourth Wing; dark romance (genre),taste mismatch,"BLEND: dark romance for Fourth Wing readers (Navessa Allen, Emily McIntire, Sierra Simone)"
+M02 title + trope,Twisted Love; enemies to lovers,burnout,title + tagged trope
+M03 trope + genre,enemies to lovers (trope); dark romance (genre),nothing new,trope + genre together
+M04 two tag favorites,fake dating; romcom,busy,trope tag + genre tags
+M05 show + trope,Bridgerton; arranged marriage,long,screen title + trope
+M06 game + genre,The Witcher 3 (game); dark fantasy,dense,game + book genre
+M07 everything,Stranger Things; kdrama; romantasy; slow burn; Circe,bored,"FIVE kinds: show, screen genre, book genre, trope, book"
+M08 kdrama + trope,Crash Landing on You; enemies to lovers (trope),tired,kdrama title + trope
+S01 Maya,Stranger Things; Grand Theft Auto V; Taylor Swift,taste mismatch,"BASELINE: show, game, artist"
+S02 Omar,Dune (film); Interstellar (film); Hans Zimmer (artist),too long,type hints in brackets
+S03 Sana,Studio Ghibli; Minecraft; Harry Potter,,blank reason: shown as a guess
+S04 kdrama titles,Goblin kdrama; Healer kdrama; Crash Landing on You,burnout,trailing 'kdrama' = show hint; Goblin -> Guardian: The Lonely and Great God
+S05 screen genres,kdrama; cdrama; anime,nothing new,"SCREEN GENRES: stand-in shows, reported as kdrama / cdrama / anime"
+S06 genre phrases,historical cdrama; period drama,tired,screen genre phrases as stand-ins
+S07 kdrama as genre,kdrama (genre),busy,"screen genre picked as Book genre: still stand-in shows, not a book tag"
+S08 short forms,gta-5; cod; lotr; hp; got,habit,short forms expand to full titles
+S09 game vs show,The Last of Us (game); The Last of Us (show),,"same title, two types"
+S10 game/show words,Squid Game; The Truman Show; The Hunger Games,not my taste,titles containing 'game' / 'show' stay whole
+S11 Avatar,Avatar; Avatar (game); Avatar The Last Airbender,taste,ambiguous title with and without a type
+S12 streaming,Wednesday (show); Bridgerton; Heartstopper,nothing new,popular streaming shows
+S13 crime shows,Peaky Blinders; Breaking Bad; Sherlock,too long,crime shows
+S14 anime titles,Naruto; Attack on Titan; One Piece,taste mismatch,anime titles
+S15 music,BTS; Blackpink; Olivia Rodrigo,burnout,artists
+S16 podcasts,Serial (podcast); Joe Rogan (podcast),,podcasts
+S17 accents,Pokémon; Pokemon; Mario Kart,,accent vs no accent
+S18 typo,babrie in swan lake; Barbie (film); Frozen (film),dense,typo in a title; the others fine
+S19 lesser-known,sombr (artist); tate mc rae (artist),bored,lesser-known + spacing: CHECK THESE MATCHES expected for sombr
+A01 author,Ana Huang,taste,AUTHOR (no Author option yet): resolves to the author; picks are weaker and generic
+A02 authors,Colleen Hoover; Stephen King,burnout,AUTHORS: generic picks expected; shows why an Author option needs work
+N01 hobbies,cricket; baking; volleyball,long,hobbies only: NO MATCH with a clear message
+N02 nonsense,asdfghjkl; qwertyuiop,,nonsense: NO MATCH
+N03 places,Japan; Pakistan,stale,"places: NO MATCH (a genre, topic or place)"
+N04 bare kinds,books; movies; games,habit,bare kind words: NO MATCH
+R01 reason key,Dune,taste_mismatch,REASON as its key
+R02 reason label,Dune,The last book wasn't my taste,REASON as the exact label
+R03 reason alias,Dune,burnt out,REASON alias -> burnout
+R04 reason caps,Dune,TOO-LONG,REASON in caps with a hyphen -> too long
+R05 reason unknown,Dune,xyz not a reason,unknown reason: treated as a guess
+R06 reason blank,Dune,,blank reason: treated as a guess
+E01 six favorites,BTS; Blackpink; Taylor Swift; Billie Eilish; Dua Lipa; Ed Sheeran,burnout,SIX favorites: only the first five used; upload warns
+E02 duplicates,Dune; dune; DUNE,long,duplicates collapse to one
+,Dune,,MISSING NAME: row skipped with a message
+E03 no favorites,,,MISSING FAVORITES: row skipped with a message
+E04 pipes,Healer|Goblin|BTS,burnout,pipe separators work like semicolons
+E05 mixed separators,Circe; romcom | enemies to lovers,,semicolon and pipe in one cell
+E06 stray separators,;; Dune ;; ; Circe ;,,empty pieces ignored
+E07 spaces,   Twisted Love   ;    dark romance   ,  burnout  ,extra spaces trimmed (reason too)
+"=HYPERLINK(""http://example.com"",""click"")",Dune,,FORMULA-LIKE NAME: must be harmless in the downloaded CSV
++SUM(1+1),Circe,,FORMULA-LIKE NAME starting with +: must be escaped in the export
+E08 html,<b>Circe</b>; <script>alert(1)</script>,,"HTML in favorites: shown as text, never run"
+Émilie Çelik 名前,Amélie (film); Spirited Away,,unicode name and accents
+E09 emoji 📚✨,Twisted Love 💜; romcom,,emoji in name and favorite
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,Dune,,very long name: must not break the layout
+E10 long title,A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long title that does not exist,,"very long favorite: NO MATCH, no crash"
+E11 commas,"Red, White & Royal Blue; Love, Rosie",,commas inside titles (quoted cell)
+E12 quotes,"The ""Twisted"" series; Twisted Love",,double quotes inside a cell
+E13 hint casing,TWISTED LOVE (BOOK); Enemies To Lovers (TROPE); Dark Romance (Genre),,hints in any letter case
+E14 unknown hint,Twisted Love (audiobook),,unknown hint word: kept as part of the title
+E15 numbers,1984; 2001: A Space Odyssey,,titles that are numbers

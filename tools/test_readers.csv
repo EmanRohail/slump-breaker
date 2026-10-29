@@ -1,0 +1,33 @@
+name,favorites,reason,notes
+Maya,Stranger Things; Grand Theft Auto V; Taylor Swift,taste mismatch,BASELINE: known titles of mixed kinds
+Omar,Dune (film); Interstellar (film); Hans Zimmer (artist),too long,type hints in brackets
+Sana,Studio Ghibli; Minecraft; Harry Potter,,blank reason: shown as a guess
+Hina,Goblin kdrama; Healer kdrama; Crash Landing on You,burnout,trailing 'kdrama' becomes a show hint
+Ayesha,kdrama; cdrama,nothing new,"two bare genres: swapped for well-known titles, graph says kdrama / cdrama"
+Zara,historical cdrama; period drama; anime,tired,genre phrases
+Bilal,romance; thriller; fantasy; horror; comedy,busy,"five genres, no titles"
+Noor,cricket; baking; volleyball,long,"hobbies only: expect NO MATCH, clear message"
+Ali,gta-5; cod; lotr; hp; got,habit,short forms and aliases
+Fatima,sombr (artist); tate mc rae (artist); Olivia Rodrigo,bored,lesser-known + spacing: expect a CHECK THESE MATCHES warning for sombr
+Hamza,babrie in swan lake; Barbie (film); Frozen (film),dense,typo in a title; others fine
+Iqra,Squid Game; The Truman Show; The Hunger Games,not my taste,titles containing 'game' / 'show' stay whole
+Usman,Avatar; Avatar (game); Avatar The Last Airbender,taste,ambiguous title with and without type
+Mehwish,BTS; Blackpink; Taylor Swift; Billie Eilish; Dua Lipa; Ed Sheeran,burnout,"SIX favorites: only first five used, upload shows a warning"
+Saad,Dune; dune; DUNE,long,duplicates collapse to one
+,Dune,,MISSING NAME: row skipped with a message
+NoFavs,,,MISSING FAVORITES: row skipped with a message
+Rayan,Healer|Goblin|BTS,burnout,pipe separators work like semicolons
+Dua,The Last of Us (game); The Last of Us (show),,"same title, two types"
+"=HYPERLINK(""http://example.com"",""click"")",Dune,,FORMULA-LIKE NAME: must be harmless in the downloaded CSV
+Émilie Çelik 名前,Amélie (film); Spirited Away,,unicode name and accents
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,Dune,,very long name: must not break the layout
+Tariq,Pokémon; Pokemon; Mario Kart,,accent vs no accent
+Laila,Wednesday (show); Bridgerton; Heartstopper,nothing new,popular streaming shows
+Kamran,Peaky Blinders; Breaking Bad; Sherlock,too long,crime shows
+Sadia,Fleabag; Normal People; Euphoria,burned out,reason alias 'burned out'
+Fahad,Naruto; Attack on Titan; One Piece,taste mismatch,anime titles
+Nida,Harry Potter (book); Pride and Prejudice (book),,books as favorites
+Zain,Serial (podcast); Joe Rogan (podcast),,podcasts
+Unknown,asdfghjkl; qwertyuiop,,nonsense: expect NO MATCH
+Reasonless,Dune,xyz not a reason,unknown reason text: treated as a guess
+Mixed,Stranger Things; kdrama; BTS; anime; Dune (film),nothing new,real titles AND genre words together

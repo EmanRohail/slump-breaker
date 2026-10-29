@@ -8,13 +8,16 @@ from __future__ import annotations
 # favorite (lowercase) -> (display name, entity type)
 MOCK_ENTITIES: dict[str, tuple[str, str]] = {
     "stranger things": ("Stranger Things", "tv_show"),
-    "hades": ("Hades", "video_game"),
-    "hozier": ("Hozier", "artist"),
+    "grand theft auto v": ("Grand Theft Auto V", "videogame"),
+    "minecraft": ("Minecraft", "videogame"),
+    "harry potter": ("Harry Potter", "movie"),
+    "game of thrones": ("Game of Thrones", "tv_show"),
     "dune": ("Dune", "movie"),
     "interstellar": ("Interstellar", "movie"),
     "hans zimmer": ("Hans Zimmer", "artist"),
     "studio ghibli": ("Studio Ghibli", "brand"),
-    "animal crossing": ("Animal Crossing", "video_game"),
+    "spirited away": ("Spirited Away", "movie"),
+    "animal crossing": ("Animal Crossing", "videogame"),
     "taylor swift": ("Taylor Swift", "artist"),
 }
 
@@ -25,15 +28,25 @@ MOCK_BOOK_RECS: dict[str, list[tuple[str, str, list[str], float, int]]] = {
         ("Ready Player One", "Ernest Cline", ["nostalgia", "adventure", "pop culture"], 0.87, 374),
         ("The Girl with All the Gifts", "M. R. Carey", ["suspense", "survival", "sci-fi"], 0.80, 460),
     ],
-    "Hades": [
-        ("Circe", "Madeline Miller", ["mythology", "retelling", "character-driven"], 0.93, 393),
-        ("The Song of Achilles", "Madeline Miller", ["mythology", "romance", "tragedy"], 0.88, 378),
-        ("The Lightning Thief", "Rick Riordan", ["mythology", "fast-paced", "adventure"], 0.84, 377),
+    "Grand Theft Auto V": [
+        ("The Godfather", "Mario Puzo", ["crime", "family", "gripping"], 0.92, 448),
+        ("Shantaram", "Gregory David Roberts", ["crime", "adventure", "underworld"], 0.86, 944),
+        ("The Girl with the Dragon Tattoo", "Stieg Larsson", ["crime", "thriller", "fast-paced"], 0.83, 465),
     ],
-    "Hozier": [
-        ("Circe", "Madeline Miller", ["mythology", "lyrical", "character-driven"], 0.90, 393),
-        ("The Night Circus", "Erin Morgenstern", ["atmospheric", "romance", "magic"], 0.86, 387),
-        ("Piranesi", "Susanna Clarke", ["lyrical", "mystery", "short"], 0.82, 272),
+    "Minecraft": [
+        ("The Hobbit", "J.R.R. Tolkien", ["adventure", "fantasy", "exploration"], 0.90, 310),
+        ("Ready Player One", "Ernest Cline", ["games", "adventure", "pop culture"], 0.86, 374),
+        ("Legends & Lattes", "Travis Baldree", ["cozy", "low-stakes", "fantasy"], 0.82, 292),
+    ],
+    "Harry Potter": [
+        ("The Lightning Thief", "Rick Riordan", ["magic", "mythology", "fast-paced"], 0.91, 377),
+        ("The Night Circus", "Erin Morgenstern", ["atmospheric", "magic", "romance"], 0.87, 387),
+        ("Howl's Moving Castle", "Diana Wynne Jones", ["whimsical", "magic", "cozy"], 0.84, 329),
+    ],
+    "Game of Thrones": [
+        ("The Name of the Wind", "Patrick Rothfuss", ["epic", "fantasy", "character-driven"], 0.90, 662),
+        ("The Lies of Locke Lamora", "Scott Lynch", ["heist", "fantasy", "witty"], 0.85, 752),
+        ("Circe", "Madeline Miller", ["mythology", "retelling", "character-driven"], 0.80, 393),
     ],
     "Dune": [
         ("Hyperion", "Dan Simmons", ["epic", "sci-fi", "interwoven stories"], 0.90, 482),
@@ -54,6 +67,11 @@ MOCK_BOOK_RECS: dict[str, list[tuple[str, str, list[str], float, int]]] = {
         ("Kiki's Delivery Service", "Eiko Kadono", ["cozy", "coming-of-age", "gentle"], 0.89, 224),
         ("The House in the Cerulean Sea", "TJ Klune", ["cozy", "found family", "whimsical"], 0.86, 396),
     ],
+    "Spirited Away": [
+        ("Howl's Moving Castle", "Diana Wynne Jones", ["whimsical", "magic", "cozy"], 0.92, 329),
+        ("Kiki's Delivery Service", "Eiko Kadono", ["cozy", "coming-of-age", "gentle"], 0.88, 224),
+        ("The House in the Cerulean Sea", "TJ Klune", ["cozy", "found family", "whimsical"], 0.84, 396),
+    ],
     "Animal Crossing": [
         ("Legends & Lattes", "Travis Baldree", ["cozy", "low-stakes", "fantasy"], 0.92, 292),
         ("A Psalm for the Wild-Built", "Becky Chambers", ["cozy", "gentle", "novella"], 0.90, 160),
@@ -66,6 +84,11 @@ MOCK_BOOK_RECS: dict[str, list[tuple[str, str, list[str], float, int]]] = {
     ],
 }
 
+def supported_titles() -> list[str]:
+    """Display names the offline fixture can resolve, for the demo-mode notice."""
+    return [display for display, _ in MOCK_ENTITIES.values()]
+
+
 # Generic bestseller-style answer used for the "plain LLM" side of the comparison in mock mode.
 MOCK_GENERIC_PICKS: list[tuple[str, str]] = [
     ("Atomic Habits", "James Clear"),
@@ -76,7 +99,7 @@ MOCK_GENERIC_PICKS: list[tuple[str, str]] = [
 # Demo readers for the app's example picker and for tests.
 DEMO_READERS: dict[str, dict] = {
     "Maya (last pick wasn't her taste)": {
-        "favorites": ["Stranger Things", "Hades", "Hozier"],
+        "favorites": ["Stranger Things", "Grand Theft Auto V", "Taylor Swift"],
         "reason": "taste_mismatch",
         "minutes": 20,
         "story": "Picked a hyped literary novel from great reviews, didn't connect with it, and hasn't opened a book since.",
@@ -88,7 +111,7 @@ DEMO_READERS: dict[str, dict] = {
         "story": "Loves big sci-fi on screen, but every book he tries feels like a 600-page commitment.",
     },
     "Sana (burned out)": {
-        "favorites": ["Studio Ghibli", "Animal Crossing", "Taylor Swift"],
+        "favorites": ["Studio Ghibli", "Minecraft", "Harry Potter"],
         "reason": "burnout",
         "minutes": 10,
         "story": "Read heavily for exams, now cannot focus on anything dense or demanding.",
