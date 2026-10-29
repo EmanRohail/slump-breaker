@@ -13,19 +13,33 @@ st.set_page_config(page_title="Slump Breaker", page_icon="📖", layout="wide")
 st.markdown(theme.CSS, unsafe_allow_html=True)
 
 
+# Each client is cached per setting value, not once per server: keys added or changed in the host's Secrets
+# take effect on the next page load (a client cached once kept "no key" mode until the app was rebooted).
 @st.cache_resource
+def _qloo(api_key: str, base_url: str) -> QlooClient:
+    return QlooClient(api_key=api_key, base_url=base_url)
+
+
+@st.cache_resource
+def _llm(api_key: str, model: str):
+    return agent.build_llm(api_key, model)
+
+
+@st.cache_resource
+def _auth(url: str, anon_key: str) -> auth.AuthClient:
+    return auth.AuthClient(url, anon_key)
+
+
 def get_qloo() -> QlooClient:
-    return QlooClient(api_key=config.qloo_api_key(), base_url=config.qloo_base_url())
+    return _qloo(config.qloo_api_key(), config.qloo_base_url())
 
 
-@st.cache_resource
 def get_llm():
-    return agent.build_llm(config.gemini_api_key(), config.gemini_model())
+    return _llm(config.gemini_api_key(), config.gemini_model())
 
 
-@st.cache_resource
 def get_auth() -> auth.AuthClient:
-    return auth.AuthClient(config.supabase_url(), config.supabase_anon_key())
+    return _auth(config.supabase_url(), config.supabase_anon_key())
 
 
 qloo = get_qloo()
