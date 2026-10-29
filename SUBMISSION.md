@@ -2,7 +2,7 @@
 
 **Slump Breaker wins back lapsed readers with a comeback book chosen by Qloo's taste graph, not by guesswork.**
 
-- **Live demo:** https://slump-breaker-xgmsapphsectx3mcq2nkr8z.streamlit.app/
+- **Live demo:** https://slump-breaker.streamlit.app/
 - **Code:** https://github.com/EmanRohail/slump-breaker (MIT)
 - **Try it:** Continue as guest → Reader view → type `enemies to lovers` (type: Trope), or upload `tools/test_readers.csv` in the Business view.
 

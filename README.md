@@ -8,7 +8,7 @@ A favorite can be a TV show or series, movie, video game, music artist or band, 
 
 A **Reader** view shows the same engine from the reader's side, with "Worked / Not for me" feedback that re-asks Qloo.
 
-**Live demo:** https://slump-breaker-xgmsapphsectx3mcq2nkr8z.streamlit.app/  (free hosting: if it says the app is asleep, click to wake it; it takes about a minute)
+**Live demo:** https://slump-breaker.streamlit.app/  (free hosting: if it says the app is asleep, click to wake it; it takes about a minute)
 
 ## Why it needs Qloo
 
